@@ -1,0 +1,26 @@
+$mainColor : red;
+
+.header {
+    color: $mainColor
+}
+
+@mixin default-type {
+    font-size: 17px;
+    font-weight: bold;
+    color: gray
+}
+
+.mix{
+    @include default-type
+}
+
+.mix2{
+    @include default-type
+}
+
+.nested{
+    background-color: palevioletred;
+    p{
+        color: rgb(1, 8, 14);
+    }
+}
