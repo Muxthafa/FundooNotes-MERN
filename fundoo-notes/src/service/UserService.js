@@ -3,7 +3,7 @@ import axiosHelper from "../helper/axios";
 let userRegister = (data) => {
   let reqObj = {
     method: "post",
-    URL: 'http://localhost:5000/users',
+    URL: 'https://fundoonotes-mern.herokuapp.com/users',
     headers: {
       "Content-type": "application/json",
     },
@@ -21,7 +21,7 @@ let userRegister = (data) => {
 let userLogin = (data) => {
   let reqObj = {
     method: "post",
-    URL: 'http://localhost:5000/users/login',
+    URL: 'https://fundoonotes-mern.herokuapp.com/users/login',
     headers: {
       "Content-type": "application/json",
     },
@@ -39,7 +39,7 @@ let userLogin = (data) => {
 let forgetPassword = (data) => {
   let reqObj = {
     method: "post",
-    URL: 'http://localhost:5000/users/forgot-password',
+    URL: 'https://fundoonotes-mern.herokuapp.com/users/forgot-password',
     headers: {
       "Content-type": "application/json",
     },
@@ -57,7 +57,7 @@ let forgetPassword = (data) => {
 let resetPassword = (data, token) => {
   let reqObj = {
     method: "post",
-    URL: `http://localhost:5000/users/reset/${token}`,
+    URL: `https://fundoonotes-mern.herokuapp.com/users/reset/${token}`,
     headers: {
       "Content-type": "application/json",
     },

@@ -3,7 +3,7 @@ import axiosHelper from "../helper/axios";
 let noteFetch = (token) => {
     let reqObj = {
       method: "get",
-      URL: 'http://localhost:5000/notes',
+      URL: 'https://fundoonotes-mern.herokuapp.com/notes',
       headers: {
         "Content-type": "application/json",
         "authorization" : token
@@ -22,7 +22,7 @@ let setNotes = (data) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "post",
-    URL: 'http://localhost:5000/notes',
+    URL: 'https://fundoonotes-mern.herokuapp.com/notes',
     headers: {
       "Content-type": "application/json",
       "authorization" : token
@@ -42,7 +42,7 @@ let updateNote = (data, id) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "put",
-    URL: 'http://localhost:5000/notes/'+id,
+    URL: 'https://fundoonotes-mern.herokuapp.com/notes/'+id,
     headers: {
       "Content-type": "application/json",
       "authorization" : token
@@ -62,7 +62,7 @@ let setTrash = (data, id) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "put",
-    URL: 'http://localhost:5000/notes/'+id,
+    URL: 'https://fundoonotes-mern.herokuapp.com/notes/'+id,
     headers: {
       "Content-type": "application/json",
       "authorization" : token
@@ -82,7 +82,7 @@ let deleteNote = (id) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "delete",
-    URL: 'http://localhost:5000/notes/'+id,
+    URL: 'https://fundoonotes-mern.herokuapp.com/notes/'+id,
     headers: {
       "Content-type": "application/json",
       "authorization" : token
@@ -101,7 +101,7 @@ let setColor = (data, id) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "put",
-    URL: 'http://localhost:5000/notes/'+id,
+    URL: 'https://fundoonotes-mern.herokuapp.com/notes/'+id,
     headers: {
       "Content-type": "application/json",
       "authorization" : token
@@ -122,7 +122,7 @@ let uploadImage = (data) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "post",
-    URL: 'http://localhost:5000/notes/image',
+    URL: 'https://fundoonotes-mern.herokuapp.com/notes/image',
     data,
     headers: {
       "Content-type": "multipart/form-data",
