@@ -1,9 +1,10 @@
 import axiosHelper from "../helper/axios";
+const url = require("../config/local");
 
 let noteFetch = (token) => {
     let reqObj = {
       method: "get",
-      URL: 'https://fundoonotes-mern.herokuapp.com/notes',
+      URL: url.baseURL+'/notes',
       headers: {
         "Content-type": "application/json",
         "authorization" : token
@@ -22,7 +23,7 @@ let setNotes = (data) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "post",
-    URL: 'https://fundoonotes-mern.herokuapp.com/notes',
+    URL: url.baseURL+'/notes',
     headers: {
       "Content-type": "application/json",
       "authorization" : token
@@ -42,7 +43,7 @@ let updateNote = (data, id) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "put",
-    URL: 'https://fundoonotes-mern.herokuapp.com/notes/'+id,
+    URL: url.baseURL+'/notes/'+id,
     headers: {
       "Content-type": "application/json",
       "authorization" : token
@@ -62,7 +63,7 @@ let setTrash = (data, id) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "put",
-    URL: 'https://fundoonotes-mern.herokuapp.com/notes/'+id,
+    URL: url.baseURL+'/notes/'+id,
     headers: {
       "Content-type": "application/json",
       "authorization" : token
@@ -82,7 +83,7 @@ let deleteNote = (id) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "delete",
-    URL: 'https://fundoonotes-mern.herokuapp.com/notes/'+id,
+    URL: url.baseURL+'/notes/'+id,
     headers: {
       "Content-type": "application/json",
       "authorization" : token
@@ -101,7 +102,7 @@ let setColor = (data, id) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "put",
-    URL: 'https://fundoonotes-mern.herokuapp.com/notes/'+id,
+    URL: url.baseURL+'/notes/'+id,
     headers: {
       "Content-type": "application/json",
       "authorization" : token
@@ -122,7 +123,7 @@ let uploadImage = (data) => {
   let token = sessionStorage.getItem("token");
   let reqObj = {
     method: "post",
-    URL: 'https://fundoonotes-mern.herokuapp.com/notes/image',
+    URL: url.baseURL+'/notes/image',
     data,
     headers: {
       "Content-type": "multipart/form-data",

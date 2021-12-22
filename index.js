@@ -29,7 +29,7 @@ require('dotenv').config()
 
 app.use(
   cors({
-    origin: "https://fundoonotes-mern.herokuapp.com/"
+    origin: "https://fundoonotes-mern.herokuapp.com"
   })
 )
 const PORT = process.env.PORT || 8080;
